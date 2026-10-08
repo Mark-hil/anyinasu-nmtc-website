@@ -43,15 +43,21 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b">
       <div className="container-max flex items-center justify-between h-16 px-4">
-        <Link to="/" className="flex items-center gap-2.5">
-          <img
-            src={schoolLogo}
-            alt="School Logo"
-            className="w-10 h-10 object-contain drop-shadow-sm"
-          />
-          <div className="hidden sm:block">
-            <span className="font-bold text-sm leading-none text-foreground">S.D.A Nursing & Midwifery</span>
-            <span className="block text-xs text-muted-foreground leading-none mt-1">Training College - Anyinasu</span>
+        <Link to="/" className="group flex items-center gap-3 transition-opacity hover:opacity-95">
+          <div className="relative shrink-0">
+            <img
+              src={schoolLogo}
+              alt="S.D.A NMTC Anyinasu Crest"
+              className="w-11 h-11 md:w-12 md:h-12 object-contain drop-shadow-sm transition-transform duration-200 group-hover:scale-105"
+            />
+          </div>
+          <div className="flex flex-col justify-center">
+            <span className="font-extrabold text-sm sm:text-base leading-tight tracking-tight text-foreground group-hover:text-primary transition-colors">
+              S.D.A Nursing &amp; Midwifery
+            </span>
+            <span className="text-[11px] sm:text-xs font-semibold tracking-wide text-primary/90 dark:text-emerald-400 leading-tight mt-0.5">
+              Training College <span className="text-college-gold font-bold">•</span> Anyinasu
+            </span>
           </div>
         </Link>
 
@@ -94,12 +100,19 @@ const Header = () => {
           </DropdownMenu>
           */}
 
+          {/* Apply Now button commented out
           <Link to="/admissions">
             <Button size="sm" className="hidden sm:inline-flex bg-college-red hover:bg-college-red/90 text-college-red-foreground">
               Apply Now
             </Button>
           </Link>
-          <button className="lg:hidden p-2 text-foreground" onClick={() => setMobileOpen(!mobileOpen)}>
+          */}
+
+          <button
+            className="lg:hidden p-2 rounded-md hover:bg-secondary text-foreground transition-colors"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle menu"
+          >
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
