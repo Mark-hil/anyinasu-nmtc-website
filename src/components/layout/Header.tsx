@@ -79,6 +79,7 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center gap-2">
+          {/* Portals menu commented out
           <DropdownMenu>
             <DropdownMenuTrigger className="hidden md:flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors">
               <LogIn className="h-3.5 w-3.5" /> Portals <ChevronDown className="h-3 w-3" />
@@ -91,6 +92,7 @@ const Header = () => {
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
+          */}
 
           <Link to="/admissions">
             <Button size="sm" className="hidden sm:inline-flex bg-college-red hover:bg-college-red/90 text-college-red-foreground">
@@ -113,9 +115,21 @@ const Header = () => {
                 {link.label}
               </Link>
             ))}
+
+            {/* Portals in mobile commented out
             <div className="border-t my-2" />
-            <p className="px-3 text-xs text-muted-foreground font-semibold uppercase tracking-wide">Portals & Services</p>
-            {[...portalLinks, ...moreLinks].map(link => (
+            <p className="px-3 text-xs text-muted-foreground font-semibold uppercase tracking-wide">Portals</p>
+            {portalLinks.map(link => (
+              <Link key={link.path} to={link.path} onClick={() => setMobileOpen(false)}
+                className="px-3 py-2.5 text-sm font-medium rounded-md text-muted-foreground hover:bg-secondary">
+                {link.label}
+              </Link>
+            ))}
+            */}
+
+            <div className="border-t my-2" />
+            <p className="px-3 text-xs text-muted-foreground font-semibold uppercase tracking-wide">More</p>
+            {moreLinks.map(link => (
               <Link key={link.path} to={link.path} onClick={() => setMobileOpen(false)}
                 className="px-3 py-2.5 text-sm font-medium rounded-md text-muted-foreground hover:bg-secondary">
                 {link.label}

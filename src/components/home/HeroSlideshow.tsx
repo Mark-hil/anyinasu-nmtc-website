@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { BookOpen } from "lucide-react";
+import { BookOpen, Phone } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
 import heroBg1 from "@/assets/hero-bg.jpg";
 import heroBg2 from "@/assets/hero-bg-2.jpg";
@@ -82,8 +82,8 @@ const HeroSlideshow = () => {
             </Button>
           </Link>
           <Link to="/contact">
-            <Button size="lg" variant="outline" className="border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground/10 font-semibold px-8">
-              Contact Us
+            <Button size="lg" className="bg-white hover:bg-white/90 text-college-green-dark font-semibold px-8 shadow-sm">
+              <Phone className="mr-2 h-5 w-5" /> Contact Us
             </Button>
           </Link>
         </div>

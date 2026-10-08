@@ -20,7 +20,7 @@ const values = [
 ];
 
 const numbers = [
-  { icon: Users, value: "3,500+", label: "Alumni Worldwide" },
+  { icon: Users, value: "500+", label: "Alumni Worldwide" },
   { icon: GraduationCap, value: "94%", label: "Job Placement Rate" },
   { icon: Building, value: "12+", label: "Partner Hospitals" },
   { icon: Stethoscope, value: "6", label: "Accredited Programs" },
